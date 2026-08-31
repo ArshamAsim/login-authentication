@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arsham's Portal | Login System</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head> 
+
+<body>
+
+    <!-- Background -->
+    <div class="background">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Left Side -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="logo">
+                    <span>SA</span>
+                </div>
+
+                <p class="small-title">WELCOME TO</p>
+
+                <h1>Arsham's<span>Portal</span></h1>
+
+                <p class="hero-text">
+                    A modern and secure authentication experience
+                    designed with simplicity, speed and security in mind.
+                </p>
+
+                <div class="features">
+
+                    <div class="feature">
+                        <div class="feature-icon">✓</div>
+                        <div>
+                            <h3>Secure Access</h3>
+                            <p>Protect your account and personal data.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">⚡</div>
+                        <div>
+                            <h3>Fast & Simple</h3>
+                            <p>Quick authentication with a clean interface.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature">
+                        <div class="feature-icon">◆</div>
+                        <div>
+                            <h3>Modern Design</h3>
+                            <p>Responsive interface for every screen.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Right Side -->
+        <section class="auth-section">
+
+            <!-- LOGIN -->
+            <div class="form-container active" id="loginForm">
+
+                <div class="form-header">
+                    <p class="form-label">ACCOUNT ACCESS</p>
+                    <h2>Welcome Back</h2>
+                    <p>Login to continue to your account.</p>
+                </div>
+
+                <form id="login">
+
+                    <div class="input-group">
+                        <label for="loginUsername">Username</label>
+
+                        <div class="input-box">
+                            <span class="input-icon">👤</span>
+
+                            <input
+                                type="text"
+                                id="loginUsername"
+                                placeholder="Enter your username"
+                                autocomplete="username"
+                                required>
+                        </div>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="loginPassword">Password</label>
+
+                        <div class="input-box">
+                            <span class="input-icon">🔒</span>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="loginPassword">
+                                👁
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <div class="form-options">
+
+                        <label class="remember">
+                            <input type="checkbox" id="remember">
+                            <span>Remember me</span>
+                        </label>
+
+                        <button
+                            type="button"
+                            class="text-button"
+                            id="forgotButton">
+                            Forgot Password?
+                        </button>
+
+                    </div>
+
+                    <button type="submit" class="primary-button">
+                        <span>Login</span>
+                        <span class="button-arrow">→</span>
+                    </button>
+
+                </form>
+
+                <div class="divider">
+                    <span>OR</span>
+                </div>
+
+                <p class="switch-text">
+                    Don't have an account?
+                    <button type="button" class="switch-button" data-form="signupForm">
+                        Create Account
+                    </button>
+                </p>
+
+            </div>
+
+
+            <!-- SIGN UP -->
+            <div class="form-container" id="signupForm">
+
+                <div class="form-header">
+                    <p class="form-label">NEW ACCOUNT</p>
+                    <h2>Create Account</h2>
+                    <p>Register your account in a few seconds.</p>
+                </div>
+
+                <form id="signup">
+
+                    <div class="input-group">
+                        <label for="signupUsername">Username</label>
+
+                        <div class="input-box">
+                            <span class="input-icon">👤</span>
+
+                            <input
+                                type="text"
+                                id="signupUsername"
+                                placeholder="Choose a username"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="signupEmail">Email Address</label>
+
+                        <div class="input-box">
+                            <span class="input-icon">✉</span>
+
+                            <input
+                                type="email"
+                                id="signupEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="signupPassword">Password</label>
+
+                        <div class="input-box">
+                            <span class="input-icon">🔒</span>
+
+                            <input
+                                type="password"
+                                id="signupPassword"
+                                placeholder="Create a password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-target="signupPassword">
+                                👁
+                            </button>
+                        </div>
+
+                        <div class="password-strength">
+                            <div class="strength-bar"></div>
+                        </div>
+
+                        <p class="strength-text">Password strength: <span>None</span></p>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="confirmPassword">Confirm Password</label>
+
+                        <div class="input-box">
+                            <span class="input-icon">🔐</span>
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm your password"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="primary-button">
+                        <span>Create Account</span>
+                        <span class="button-arrow">→</span>
+                    </button>
+
+                </form>
+
+                <p class="switch-text">
+                    Already have an account?
+                    <button type="button" class="switch-button" data-form="loginForm">
+                        Login
+                    </button>
+                </p>
+
+            </div>
+
+
+            <!-- FORGOT PASSWORD -->
+            <div class="form-container" id="forgotForm">
+
+                <div class="form-header">
+                    <p class="form-label">ACCOUNT RECOVERY</p>
+                    <h2>Forgot Password?</h2>
+                    <p>Enter your username and email to recover your account.</p>
+                </div>
+
+                <form id="forgot">
+
+                    <div class="input-group">
+                        <label for="forgotUsername">Username</label>
+
+                        <div class="input-box">
+                            <span class="input-icon">👤</span>
+
+                            <input
+                                type="text"
+                                id="forgotUsername"
+                                placeholder="Enter your username"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="forgotEmail">Email Address</label>
+
+                        <div class="input-box">
+                            <span class="input-icon">✉</span>
+
+                            <input
+                                type="email"
+                                id="forgotEmail"
+                                placeholder="Enter your email"
+                                required
+                            >
+                        </div>
+                    </div>
+
+
+                    <button type="submit" class="primary-button">
+                        <span>Recover Account</span>
+                        <span class="button-arrow">→</span>
+                    </button>
+
+                </form>
+
+                <p class="switch-text">
+                    Remember your password?
+                    <button type="button" class="switch-button" data-form="loginForm">
+                        Back to Login
+                    </button>
+                </p>
+
+            </div>
+
+
+            <!-- DASHBOARD -->
+            <div class="dashboard" id="dashboard">
+
+                <div class="dashboard-icon">✓</div>
+
+                <p class="form-label">AUTHENTICATION SUCCESSFUL</p>
+
+                <h2>Welcome, <span id="dashboardUsername"></span></h2>
+
+                <p>
+                    You have successfully logged into your account.
+                </p>
+
+                <div class="user-card">
+
+                    <div class="user-avatar" id="userAvatar">
+                        U
+                    </div>
+
+                    <div>
+                        <span>Username</span>
+                        <strong id="dashboardUser"></strong>
+                    </div>
+
+                    <div>
+                        <span>Email</span>
+                        <strong id="dashboardEmail"></strong>
+                    </div>
+
+                </div>
+
+                <button class="primary-button" id="logoutButton">
+                    <span>Logout</span>
+                    <span>→</span>
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon">✓</div>
+
+        <div>
+            <strong id="toastTitle">Success</strong>
+            <p id="toastMessage">Operation completed.</p>
+        </div>
+
+        <button id="closeToast">×</button>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
